@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            .first .second .third .forth{
+                height: 50px;
+                width: 800px;
+            }
+
+            /* Frist links line */
+            .first div {
+                margin: 5px;
+                padding-top: 5px;
+                padding-right: 5px;
+                padding-bottom: 5px;
+                display: inline;
+                border-right: solid;
+                border-width:  3px;
+                border-right-color: red;
+            }
+
+            .first div:last-child {
+                border-right: none;
+            }
+
+            .first div a {
+                color: green;
+            }
+
+            .first div a:hover {
+                color: red;
+            }
+
+            /* Second links line */
+            .second ul {
+                padding: 0;
+                margin-bottom: 5px;
+            }
+
+            .second li{
+                display: inline;
+                margin: 5px;
+                padding-top: 5px;
+                padding-right: 5px;
+                padding-bottom: 5px;
+                border-right: solid;
+                border-width:  3px;
+                border-right-color: red;
+            }
+
+            .second li:last-child{
+                border-right: none;
+            }
+
+            .second a {
+                color: green;
+            }
+
+            .second a:hover {
+                color: red;
+            }
+
+            /* Third links line */
+            .third a {
+                display: inline-block;
+                color: green;
+                margin: 5px;
+                padding-top: 5px;
+                padding-right: 5px;
+                padding-bottom: 5px;
+                border-right: solid;
+                border-width:  3px;
+                border-right-color: red;
+            }
+
+            .third a:hover {
+                color: red;
+            }
+
+            .third a:last-child {
+                border-right: none;
+            }
+
+            /* Forth links line */
+            .forth td {
+                padding-left: 12px;
+                padding-top: 5px;
+                padding-right: 5px;
+                padding-bottom: 5px;
+                border-right: solid;
+                border-width:  3px;
+                border-right-color: red;
+            }
+
+            .forth a {
+                color: green;
+            }
+
+            .forth a:hover {
+                color: red;
+            }
+
+            .forth td:first-child {
+                padding-left: 2px;
+            }
+
+            .forth td:last-child {
+                border-right: none;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="first">
+            <div><a href="#">Первая ссылка</a></div>
+            <div><a href="#">Вторая ссылка</a></div>
+            <div><a href="#">Третья ссылка</a></div>
+            <div><a href="#">Четвертая ссылка</a></div>
+            <div><a href="#">Пятая ссылка</a></div>
+        </div>
+        <span style="float: right;">Tag 'A' in tag 'Div'</span>
+        <div class="second">
+            <ul>
+                <li><a href="#">Первая ссылка</a></li>
+                <li><a href="#">Вторая ссылка</a></li>
+                <li><a href="#">Третья ссылка</a></li>
+                <li><a href="#">Четвертая ссылка</a></li>
+                <li><a href="#">Пятая ссылка</a></li>
+            </ul>
+        </div>
+        <span style="float: right;">Unordered list</span>
+        <div class="third">
+            <a href="#">Первая ссылка</a>
+            <a href="#">Вторая ссылка</a>
+            <a href="#">Третья ссылка</a>
+            <a href="#">Четвертая ссылка</a>
+            <a href="#">Пятая ссылка</a>
+        </div> 
+        <span style="float: right;">Tag 'A'</span>
+        <div class="forth">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><a href="#">Первая ссылка</a></td>
+                        <td><a href="#">Вторая ссылка</a></td>
+                        <td><a href="#">Третья ссылка</a></td>
+                        <td><a href="#">Четвертая ссылка</a></td>
+                        <td><a href="#">Пятая ссылка</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <span style="float: right;">Table</span>
+    </body>
+</html>
