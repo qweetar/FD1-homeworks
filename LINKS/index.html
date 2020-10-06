@@ -9,6 +9,10 @@
                 width: 800px;
             }
 
+            span {
+                vertical-align: top;
+            }
+
             /* Frist links line */
             .first div {
                 margin: 5px;
@@ -43,15 +47,20 @@
                 display: inline;
                 margin: 5px;
                 padding-top: 5px;
-                padding-right: 5px;
                 padding-bottom: 5px;
-                border-right: solid;
-                border-width:  3px;
-                border-right-color: red;
             }
 
-            .second li:last-child{
-                border-right: none;
+            .second li div {
+                display:inline-block;
+                width: 3px;
+                height: 30px;
+                background-color: red;
+                vertical-align: middle;
+                margin-left: 5px;
+            }
+
+            .second li:last-child div {
+                background-color: transparent;
             }
 
             .second a {
@@ -70,28 +79,31 @@
                 padding-top: 5px;
                 padding-right: 5px;
                 padding-bottom: 5px;
-                border-right: solid;
-                border-width:  3px;
-                border-right-color: red;
             }
 
             .third a:hover {
                 color: red;
             }
 
-            .third a:last-child {
-                border-right: none;
+            .third a::after {
+                content: url(line.png);
+                vertical-align: middle;
+                width: 3px;
+                height: 15px;
+                margin: 0;
+                padding-left: 5px;
+            }
+
+            .third a:last-child::after {
+                content: none;
             }
 
             /* Forth links line */
             .forth td {
-                padding-left: 12px;
+                padding-left: 5px;
                 padding-top: 5px;
-                padding-right: 5px;
+                padding-right: 0;
                 padding-bottom: 5px;
-                border-right: solid;
-                border-width:  3px;
-                border-right-color: red;
             }
 
             .forth a {
@@ -103,11 +115,20 @@
             }
 
             .forth td:first-child {
-                padding-left: 2px;
+                padding-left: 0;
             }
 
-            .forth td:last-child {
-                border-right: none;
+            .forth td::before {
+                content: "| "; 
+                color: red; 
+                font-size: 35px;
+                font-weight: bold;
+            }
+
+            .forth td:first-child::before{
+                content: "| "; 
+                color: transparent; 
+                font-size: 35px;
             }
             
         </style>
@@ -120,17 +141,17 @@
             <div><a href="#">Четвертая ссылка</a></div>
             <div><a href="#">Пятая ссылка</a></div>
         </div>
-        <span style="float: right;">Tag 'A' in tag 'Div'</span>
+        <span style="float: right;">Tag 'A' in tag 'Div' + border</span>
         <div class="second">
             <ul>
-                <li><a href="#">Первая ссылка</a></li>
-                <li><a href="#">Вторая ссылка</a></li>
-                <li><a href="#">Третья ссылка</a></li>
-                <li><a href="#">Четвертая ссылка</a></li>
-                <li><a href="#">Пятая ссылка</a></li>
+                <li><a href="#">Первая ссылка</a><div></div></li>
+                <li><a href="#">Вторая ссылка</a><div></div></li>
+                <li><a href="#">Третья ссылка</a><div></div></li>
+                <li><a href="#">Четвертая ссылка</a><div></div></li>
+                <li><a href="#">Пятая ссылка</a><div></div></li>
             </ul>
         </div>
-        <span style="float: right;">Unordered list</span>
+        <span style="float: right;">Unordered list + red div</span>
         <div class="third">
             <a href="#">Первая ссылка</a>
             <a href="#">Вторая ссылка</a>
@@ -138,7 +159,7 @@
             <a href="#">Четвертая ссылка</a>
             <a href="#">Пятая ссылка</a>
         </div> 
-        <span style="float: right;">Tag 'A'</span>
+        <span style="float: right;">Tag 'A' + :after image</span>
         <div class="forth">
             <table>
                 <tbody>
@@ -153,6 +174,6 @@
             </table>
         </div>
         
-        <span style="float: right;">Table</span>
+        <span style="float: right;">Table + :before "|"</span>
     </body>
 </html>
