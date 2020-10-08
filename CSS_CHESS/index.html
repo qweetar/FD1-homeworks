@@ -14,13 +14,12 @@
     border: solid gray 1px;
 }
 
-
-    .CHESS tr:nth-child(2n+2) td:nth-child(2n+3){
-        background-color: black;
+    .CHESS tr ~ tr:nth-child(odd) td:nth-child(even) {
+      background-color: black;
     }
 
-    .CHESS tr:nth-child(2n+3) td:nth-child(2n+2){
-        background-color: black;
+    .CHESS tr:nth-child(even)  td:first-child ~ td:nth-child(odd) {
+      background-color: black;
     }
 
     .CHESS tr:first-child td{
@@ -29,7 +28,7 @@
     }
 
     .CHESS tr:last-child td{
-        background-color:aquamarine;
+        background-color:aquamarine!important;
         height: 20px;
     }
 
@@ -39,26 +38,10 @@
     }
     
     .CHESS td:last-child {
-        background-color: aquamarine;
+        background-color: aquamarine!important;
         width: 20px;
     }
 
-    .CHESS tr:nth-child(2n+3) td:last-child:nth-child(2n+2) {
-        background-color: aquamarine;
-    }
-
-    .CHESS tr:last-child:nth-child(2n+2) td:nth-child(2n+3) {
-        background-color: aquamarine;
-    }
-
-
-    
-
-
-
-
- 
- 
 </style>
 <body>
 <table class='CHESS'>
